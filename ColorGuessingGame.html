@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html id = "theHtml" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<link rel="stylesheet" type="text/css" href="ColorGuessingGame.css">
+
+
+<body>
+
+<!--Title-->
+<fieldset>
+    <h1 align="center">Guess The Color</h1>
+</fieldset>
+
+<!--Separation-->
+<br>
+<br>
+
+<!--Guessing Portion-->
+<fieldset>
+<p>
+I am thinking of one of these colors:
+</p>
+<br>
+<p>
+Red, Blue, Green, Yellow, White, Black, Purple, Orange, Brown, Grey
+</p>
+<br>
+<p>
+What color is on my mind?
+</p>
+<center><input type="text" id="guest"></center>
+<br>
+<center><input type="button" value="Submit" onclick="randColor()"></center>
+
+</fieldset>
+
+
+<!--Javascript-->
+<script type="text/javascript" charset="utf-8">
+myBody = document.getElementsByTagName("body")[0];
+myBody.style.background = name_of_color;
+    //Colors
+    //Step 1: Create an array of HTML colors
+  /*  var colors = [
+        "red",
+        "blue",
+        "green",
+        "yellow",
+        "white",
+        "black",
+        "purple",
+        "orange",
+        "brown",
+        "grey"]; */
+
+    //Random Number Generator
+    //Step 2: Use a random number generator to pick one of the above colors.
+    //Hint: This will generate a random number between 0 and 9:
+    //i = Math.floor((Math.random() * 10));
+    function randColor () {
+        var colors = [
+            "RED",
+            "BLUE",
+            "GREEN",
+            "YELLOW",
+            "WHITE",
+            "BLACK",
+            "PURPLE",
+            "ORANGE",
+            "BROWN",
+            "GREY"];
+    var randColor = colors[Math.floor(Math.random() * 9)];
+    var Submit = document.getElementById('guest').value.toUpperCase();
+
+    alert(randColor);
+
+    //You Right
+    if (Submit == randColor) {
+        document.getElementById("theHtml").style.backgroundColor = Submit;
+        alert("Yoouuuu Rightttt Fammmm");
+    } // End of You Right
+
+    //Try Again you too high
+    else if (Submit > randColor) {
+        document.getElementById("theHtml").style.backgroundColor = Submit;
+        alert("Yo Fam, the answer is lower than what you thought LOL");
+    }
+
+    //Try again you too low
+    else if (Submit < randColor) {
+        document.getElementById("theHtml").style.backgroundColor = Submit;
+        alert("Yo Fam, the real answer is above what you thought LOL");
+    }
+
+    } // End of Function
+    //Select the i-th element from the array in Step 1--this is the "Computer choice"
+
+    //Step 3: Prompt the user for a color choice (i.e. like in the assignment document
+
+    //Step 4: Compare the "User choice" in Step 3 to the "Computer choice" from Step 2
+    //Step 5: Create an IF statement:
+    //The user might have entered a color that doesn't exist in the array
+    //"User choice" is alphabetically < "Computer choice"
+    //"User choice" is alphabetically > "Computer choice"
+    //"User choice" == "Computer choice"
+    //Step 6: Alert the user of success or failure.  Change background color IF success.
+</script>
+</body>
+</html>
