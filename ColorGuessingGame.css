@@ -1,0 +1,24 @@
+html {
+    background-color: #E1DEE9;
+    padding: 100px 100px 70px 100px;
+}
+
+fieldset {
+    background-image: url("color7.jpg");
+    border: #FAD8D6 solid 10px;
+    padding: 10px 10px 10px 10px;
+}
+
+h1 {
+    font-size: 40px;
+    color: white;
+    align-items: center;
+}
+
+p {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    font-family: "Andale Mono";
+}
+
